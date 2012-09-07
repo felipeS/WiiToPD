@@ -1,0 +1,128 @@
+#N canvas 171 22 1013 562 10;
+#X obj 418 21 dumpOSC 9000;
+#X obj 418 43 OSCroute /wii;
+#X obj 419 65 OSCroute /2;
+#X obj 418 116 OSCroute /accel;
+#X obj 417 136 OSCroute /pry;
+#X obj 118 249 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6129 1;
+#X obj 118 220 OSCroute /0;
+#X obj 201 248 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6234 1;
+#X obj 201 219 OSCroute /1;
+#X obj 284 248 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 10826 1;
+#X obj 284 219 OSCroute /2;
+#X obj 369 249 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2589 1;
+#X obj 369 220 OSCroute /3;
+#X text 109 385 pitch;
+#X text 195 384 roll;
+#X text 280 387 yaw;
+#X text 359 386 accel;
+#X text 205 419 datos Wiimote;
+#X obj 531 88 OSCroute /nunchuk;
+#X obj 532 116 OSCroute /accel;
+#X obj 532 136 OSCroute /pry;
+#X obj 560 252 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6218 1;
+#X obj 561 222 OSCroute /0;
+#X obj 643 251 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 749 1;
+#X obj 643 222 OSCroute /1;
+#X obj 726 251 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 25 1;
+#X obj 726 222 OSCroute /2;
+#X obj 811 252 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2522 1;
+#X obj 811 223 OSCroute /3;
+#X text 551 388 pitch;
+#X text 637 387 roll;
+#X text 722 390 yaw;
+#X text 801 389 accel;
+#X text 648 419 datos Nunchuk;
+#X obj 315 21 OSCroute /button;
+#X obj 315 68 OSCroute /Down;
+#X obj 316 46 OSCroute /Up;
+#X obj 315 89 OSCroute /Left;
+#X obj 315 110 OSCroute /Right;
+#X obj 220 55 tgl 20 0 empty empty arriba -8 -8 0 10 -162280 -4034
+-1 0 1;
+#X obj 220 105 tgl 20 0 empty empty abajo -4 28 0 10 -162280 -4034
+-1 0 1;
+#X obj 245 80 tgl 20 0 empty empty der 23 7 0 10 -162280 -4034 -1 0
+1;
+#X obj 194 80 tgl 20 0 empty empty izq -23 10 0 10 -162280 -4034 -1
+0 1;
+#X obj 25 39 OSCroute /1;
+#X obj 108 40 OSCroute /2;
+#X obj 24 75 tgl 15 0 empty empty 1 1 22 0 10 -262144 -1 -1 0 1;
+#X obj 66 76 tgl 15 0 empty empty 2 1 22 0 10 -262144 -1 -1 0 1;
+#X obj 19 145 tgl 15 0 empty empty A 1 22 0 10 -262144 -1 -1 0 1;
+#X obj 61 146 tgl 15 0 empty empty B 1 22 0 10 -262144 -1 -1 0 1;
+#X obj 20 109 OSCroute /A;
+#X obj 102 108 OSCroute /B;
+#X obj 20 214 tgl 15 0 empty empty Plus 1 22 0 10 -262144 -1 -1 0 1
+;
+#X obj 62 215 tgl 15 0 empty empty Minus 1 22 0 10 -262144 -1 -1 0
+1;
+#X obj 118 177 OSCroute /Minus;
+#X obj 21 178 OSCroute /Plus;
+#X obj 721 105 OSCroute /button;
+#X obj 704 166 tgl 15 0 empty empty Z 1 22 0 10 -262144 -1 -1 0 1;
+#X obj 746 167 tgl 15 0 empty empty C 1 22 0 10 -262144 -1 -1 0 1;
+#X obj 788 129 OSCroute /C;
+#X obj 705 130 OSCroute /Z;
+#X obj 556 40 OSCroute /joy;
+#X obj 683 68 print;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 18 0;
+#X connect 2 0 34 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 0 8 0;
+#X connect 4 0 10 0;
+#X connect 4 0 12 0;
+#X connect 6 0 5 0;
+#X connect 8 0 7 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 18 0 19 0;
+#X connect 18 0 55 0;
+#X connect 18 0 60 0;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 20 0 24 0;
+#X connect 20 0 26 0;
+#X connect 20 0 28 0;
+#X connect 22 0 21 0;
+#X connect 24 0 23 0;
+#X connect 26 0 25 0;
+#X connect 28 0 27 0;
+#X connect 34 0 36 0;
+#X connect 34 0 35 0;
+#X connect 34 0 37 0;
+#X connect 34 0 38 0;
+#X connect 34 0 43 0;
+#X connect 34 0 44 0;
+#X connect 34 0 49 0;
+#X connect 34 0 50 0;
+#X connect 34 0 54 0;
+#X connect 34 0 53 0;
+#X connect 35 0 40 0;
+#X connect 36 0 39 0;
+#X connect 37 0 42 0;
+#X connect 38 0 41 0;
+#X connect 43 0 45 0;
+#X connect 44 0 46 0;
+#X connect 49 0 47 0;
+#X connect 50 0 48 0;
+#X connect 53 0 52 0;
+#X connect 54 0 51 0;
+#X connect 55 0 58 0;
+#X connect 55 0 59 0;
+#X connect 58 0 57 0;
+#X connect 59 0 56 0;
+#X connect 60 0 61 0;
